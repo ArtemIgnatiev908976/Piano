@@ -27,17 +27,31 @@ function playNote(e){
 
 document.querySelector('.btn').addEventListener('click',toggleScreen);
 
+
+const btn = document.querySelectorAll('button');
+console.log(btn[0].classList.length);
+
 function toggleScreen(){
     if (document.fullscreenElement === null){
         document.documentElement.requestFullscreen(); // возращает корневой элемент
+        btn[0].classList.add('normalScreen');
+
     }
 
     else{
         if(document.fullscreenEnabled){
             document.exitFullscreen();
+            btn[0].classList.remove('normalScreen');
+            btn[0].classList.add('fullscreen');
+
+
         }
     }
 }
+
+
+
+
 
 
 //полноэкранный режим

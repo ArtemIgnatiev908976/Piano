@@ -92,3 +92,17 @@ body{
     cursor: pointer;
     background-image: url(assets/icons/fullscreen.png);
 }
+.normalScreen {
+    position: fixed;
+    top: 120px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0;
+    outline: 0;
+    background-size: contain;
+    transition: 0.3s;
+    cursor: pointer;
+    background-image: url(assets/icons/normal-screen-50.png);
+}
