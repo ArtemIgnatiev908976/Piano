@@ -21,7 +21,6 @@ function playNote(e){
 }
 
 
-
 //полноэкранный режим
 
 
@@ -34,15 +33,15 @@ console.log(btn[0].classList.length);
 function toggleScreen(){
     if (document.fullscreenElement === null){
         document.documentElement.requestFullscreen(); // возращает корневой элемент
-        btn[0].classList.add('normalScreen');
+        btn[0].classList.add('normalScreen'); // смена иконки
 
     }
 
     else{
         if(document.fullscreenEnabled){
             document.exitFullscreen();
-            btn[0].classList.remove('normalScreen');
-            btn[0].classList.add('fullscreen');
+            btn[0].classList.remove('normalScreen');// смена иконки
+            btn[0].classList.add('fullscreen');// смена иконки
 
 
         }
@@ -50,8 +49,6 @@ function toggleScreen(){
 }
 
 
-
-
-
-
 //полноэкранный режим
+
+//событие при нажатии на клавиши
