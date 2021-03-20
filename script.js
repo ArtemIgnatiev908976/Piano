@@ -19,3 +19,25 @@ function playNote(e){
         key.classList.remove('active');
     })
 }
+
+
+
+//полноэкранный режим
+
+
+document.querySelector('.btn').addEventListener('click',toggleScreen);
+
+function toggleScreen(){
+    if (document.fullscreenElement === null){
+        document.documentElement.requestFullscreen(); // возращает корневой элемент
+    }
+
+    else{
+        if(document.fullscreenEnabled){
+            document.exitFullscreen();
+        }
+    }
+}
+
+
+//полноэкранный режим
