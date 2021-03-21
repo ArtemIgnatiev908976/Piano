@@ -1,7 +1,7 @@
 
 //событие на клавиши
-const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
-const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
+const WHITE_KEYS = ['d', 'f', 'g', 'h', 'j', 'k', 'l']
+const BLACK_KEYS = ['r', 't', 'u', 'i', 'o']
 
 const keys = document.querySelectorAll('.key')
 const whiteKeys = document.querySelectorAll('.key.key-w')
@@ -12,6 +12,11 @@ const blackKeys = document.querySelectorAll('.key.key-b')
 keys.forEach(key => {
     key.addEventListener('click', () => playNote(key))
 })
+keys.forEach(key => {
+    key.addEventListener('mousemove', () => playNote(key))
+})
+
+
 
 document.addEventListener('keydown', e => {
     if (e.repeat) return
@@ -62,7 +67,33 @@ function toggleScreen(){
 }
 
 
+
+
+
+
+
+
 //полноэкранный режим
 
-//событие при нажатии на клавиши
+//таб меню
 
+function pianoBoard(evt, pianoName) {
+
+    var i, tabcontent, tablinks;
+
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+
+    document.getElementById(pianoName).style.display = "block";
+    evt.currentTarget.className += " active";
+}

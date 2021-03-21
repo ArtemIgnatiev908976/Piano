@@ -13,45 +13,114 @@
 
 <button class="fullscreen btn "></button>
 
-<div class="piano-names__blockBlack">
-    <div class="piano-names__keysBlack"></div>
-    <div class="piano-names__keysBlack">C#</div>
-    <div class="piano-names__keysBlack">D#</div>
-    <div class="piano-names__keysBlack"></div>
-    <div class="piano-names__keysBlack">F#</div>
-    <div class="piano-names__keysBlack">G#</div>
-    <div class="piano-names__keysBlack">A#</div>
 
-</div>
-<div class="piano">
 
-    <div class="key key-w" data-note="C"></div>
-    <div class="key key-b" data-note="Cs"></div>
-    <div class="key key-w" data-note="D"></div>
-    <div class="key key-b" data-note="Ds"></div>
-    <div class="key key-w" data-note="E"></div>
-    <div class="key key-w" data-note="F"></div>
-    <div class="key key-b" data-note="Fs"></div>
-    <div class="key key-w" data-note="G"></div>
-    <div class="key key-b" data-note="Gs"></div>
-    <div class="key key-w" data-note="A"></div>
-    <div class="key key-b" data-note="As"></div>
-    <div class="key key-w" data-note="B"></div>
 
+
+
+
+
+
+
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="pianoBoard(event, 'Notes')">Notes</button>
+    <button class="tablinks" onclick="pianoBoard(event, 'Letters')">Letters</button>
 
 </div>
 
+<!-- Tab content -->
+<div id="Notes" class="tabcontent" style="display: block;">
+    <div class="piano-names__blockBlack">
+        <div class="piano-names__keysBlack"></div>
+        <div class="piano-names__keysBlack">C#</div>
+        <div class="piano-names__keysBlack">D#</div>
+        <div class="piano-names__keysBlack"></div>
+        <div class="piano-names__keysBlack">F#</div>
+        <div class="piano-names__keysBlack">G#</div>
+        <div class="piano-names__keysBlack">A#</div>
 
-<div class="piano-names__blockWhite">
-    <div class="piano-names__keysWhite">C</div>
-    <div class="piano-names__keysWhite">D</div>
-    <div class="piano-names__keysWhite">E</div>
-    <div class="piano-names__keysWhite">F</div>
-    <div class="piano-names__keysWhite">G</div>
-    <div class="piano-names__keysWhite">A</div>
-    <div class="piano-names__keysWhite">B</div>
+    </div>
+    <div class="piano">
+
+        <div class="key key-w" data-note="C"></div>
+        <div class="key key-b" data-note="Cs"></div>
+        <div class="key key-w" data-note="D"></div>
+        <div class="key key-b" data-note="Ds"></div>
+        <div class="key key-w" data-note="E"></div>
+        <div class="key key-w" data-note="F"></div>
+        <div class="key key-b" data-note="Fs"></div>
+        <div class="key key-w" data-note="G"></div>
+        <div class="key key-b" data-note="Gs"></div>
+        <div class="key key-w" data-note="A"></div>
+        <div class="key key-b" data-note="As"></div>
+        <div class="key key-w" data-note="B"></div>
+
+
+    </div>
+    <div class="piano-names__blockWhite">
+        <div class="piano-names__keysWhite">C</div>
+        <div class="piano-names__keysWhite">D</div>
+        <div class="piano-names__keysWhite">E</div>
+        <div class="piano-names__keysWhite">F</div>
+        <div class="piano-names__keysWhite">G</div>
+        <div class="piano-names__keysWhite">A</div>
+        <div class="piano-names__keysWhite">B</div>
+
+    </div>
+
+
 
 </div>
+
+<div id="Letters" class="tabcontent">
+    <div class="piano-names__blockBlack">
+        <div class="piano-names__keysBlack"></div>
+        <div class="piano-names__keysBlack">R</div>
+        <div class="piano-names__keysBlack">T</div>
+        <div class="piano-names__keysBlack"></div>
+        <div class="piano-names__keysBlack">U</div>
+        <div class="piano-names__keysBlack">I</div>
+        <div class="piano-names__keysBlack">O</div>
+
+    </div>
+    <div class="piano">
+
+        <div class="key key-w" data-note="C"></div>
+        <div class="key key-b" data-note="Cs"></div>
+        <div class="key key-w" data-note="D"></div>
+        <div class="key key-b" data-note="Ds"></div>
+        <div class="key key-w" data-note="E"></div>
+        <div class="key key-w" data-note="F"></div>
+        <div class="key key-b" data-note="Fs"></div>
+        <div class="key key-w" data-note="G"></div>
+        <div class="key key-b" data-note="Gs"></div>
+        <div class="key key-w" data-note="A"></div>
+        <div class="key key-b" data-note="As"></div>
+        <div class="key key-w" data-note="B"></div>
+
+
+    </div>
+    <div class="piano-names__blockWhite">
+        <div class="piano-names__keysWhite">D</div>
+        <div class="piano-names__keysWhite">F</div>
+        <div class="piano-names__keysWhite">G</div>
+        <div class="piano-names__keysWhite">H</div>
+        <div class="piano-names__keysWhite">J</div>
+        <div class="piano-names__keysWhite">K</div>
+        <div class="piano-names__keysWhite">L</div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
 
 <audio id="C" src="assets/C.wav"></audio>
 <audio id="Cs" src="assets/Cs.wav"></audio>
@@ -65,6 +134,12 @@
 <audio id="A" src="assets/A.wav"></audio>
 <audio id="As" src="assets/As.wav"></audio>
 <audio id="B" src="assets/B.wav"></audio>
+
+
+
+
+
+
 
 <script src="script.js"></script>
 
